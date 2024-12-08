@@ -75,35 +75,25 @@ def test_01_form(driver):
 
 
 
-# # def test_02(driver):
-    assert "success" in driver.find_element(By.ID, "#first-name").get_attribute("class")
 
-# #def test_03(driver):
-    assert "success" in driver.find_element(By.ID, "#last-name").get_attribute("class")
+    assert "success" in driver.find_element(By.ID, "first-name").get_attribute("class")
 
-# # def test_04(driver):
-    assert "success" in driver.find_element(By.ID, "#address").get_attribute("class")
+    assert "success" in driver.find_element(By.ID, "last-name").get_attribute("class")
 
-# # def test_05(driver):
-    assert "success" in driver.find_element(By.ID, "#e-mail").get_attribute("class")
-#
-# # def test_06(driver):
-    assert "success" in driver.find_element(By.ID, "#phone").get_attribute("class")
-#
-# # def test_07(driver):
-    assert "danger" in driver.find_element(By.ID, "#zip-code").get_attribute("class")
-#
-# # def test_08(driver):
-    assert "success" in driver.find_element(By.ID, "#city").get_attribute("class")
-#
-# # def test_09(driver):
-    assert "success" in driver.find_element(By.ID, "#country").get_attribute("class")
-#
-# # def test_10():
-    assert "success" in driver.find_element(By.ID, "#job-position").get_attribute("class")
-# #
-# #
-    #new_fn = driver.find_element(By.ID, "#first-name").get_attribute("background-color")
+    assert "success" in driver.find_element(By.ID, "address").get_attribute("class")
+
+    assert "success" in driver.find_element(By.ID, "e-mail").get_attribute("class")
+
+    assert "success" in driver.find_element(By.ID, "phone").get_attribute("class")
+
+    assert "danger" in driver.find_element(By.ID, "zip-code").get_attribute("class")
+
+    assert "success" in driver.find_element(By.ID, "city").get_attribute("class")
+
+    assert "success" in driver.find_element(By.ID, "country").get_attribute("class")
+
+    assert "success" in driver.find_element(By.ID, "job-position").get_attribute("class")
+
 
 
 
