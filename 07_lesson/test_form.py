@@ -21,7 +21,7 @@ def driver():
     driver.quit()
 
 
-def TestForm(driver):
+def TestForm(driver, id_values):
     main_page = FormMainPage(driver)
     main_page.fill_cell()
     main_page.click_submit()
@@ -42,7 +42,7 @@ def TestForm(driver):
     assert 'success' in filled_form.get_class('first-name')
     assert 'success' in filled_form.get_class('last-name')
     assert 'success' in filled_form.get_class('address')
-    assert 'danger' in filled_form.get_class('zip-code')
+    assert 'danger' in filled_form.get_class("zip-code")
     assert 'success' in filled_form.get_class('city')
     assert 'success' in filled_form.get_class('country')
     assert 'success' in filled_form.get_class('email')

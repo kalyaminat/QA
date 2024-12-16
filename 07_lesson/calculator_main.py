@@ -8,19 +8,19 @@ class CalculatorMainPage:
         self.driver = driver
         self.driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
 
-    def send_delay(self, driver, operation):
+    def send_delay(self, operation):
         delay = self.driver.find_element(By.CSS_SELECTOR, 'input#delay')
         delay.clear()
-        delay.send_keys('operation')
+        delay.send_keys(operation)
 
-    def get_operations(self, driver):
-        operations = list()
+    def get_operations(self, operations):
         for op in operations:
             self.driver.find_element(By.XPATH, f"//span[text()='{op}']").click()
 
-    def get_result(self, driver, result):
-        WebDriverWait(driver, 50).until(
-            EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "result"))
+    def get_result(self):
+        WebDriverWait(self.driver, 50).until(
+            EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen")))
         result = self.driver.find_element(By.CSS_SELECTOR, '.screen').text
+        return result
 
 
