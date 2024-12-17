@@ -17,10 +17,10 @@ def driver():
 
 def test_assertion(driver):
     main_page = CalculatorMainPage(driver)
-    main_page.send_delay()
-    main_page.get_operations()
+    main_page.send_delay(operations)
+    main_page.get_operations(operations)
     main_page.get_result()
 
-    assert main_page.get_result().text == expected
+    assert main_page.get_result() == expected
 
 

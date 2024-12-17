@@ -7,7 +7,7 @@ class FilledForm:
     def __init__(self, driver):
         self.driver = driver
 
-    def  find_fields(self, driver, ID):
+    def  find_fields(self, ID: [id_values]):
         for id_value in id_values:
             self.driver.find_element(By.ID, id_value)
 

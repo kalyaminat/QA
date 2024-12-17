@@ -21,7 +21,7 @@ def driver():
     driver.quit()
 
 
-def TestForm(driver, id_values):
+def TestForm(driver):
     main_page = FormMainPage(driver)
     main_page.fill_cell()
     main_page.click_submit()
@@ -49,6 +49,9 @@ def TestForm(driver, id_values):
     assert 'success' in filled_form.get_class('phone')
     assert 'success' in filled_form.get_class('job-position')
     assert 'success' in filled_form.get_class('company')
+
+    #filled_form.get_class()
+    #assert 'success' in filled_form.get_class() if id_value != 'zip-code'
 
 
 

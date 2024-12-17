@@ -10,7 +10,7 @@ class MainShop:
         self.driver = driver
         self.driver.get("https://www.saucedemo.com/")
 
-    def get_authentication(self, credentials):
+    def complete_authentication(self,credentials):
         for key, value in credentials.items():
             info = f'{value}'
             auth_name = self.driver.find_element(By.CSS_SELECTOR, 'input#user-name').send_keys(info)

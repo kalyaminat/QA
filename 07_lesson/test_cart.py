@@ -31,21 +31,21 @@ def driver():
     yield driver
     driver.quit()
 
-def test_cart(driver):
+def test_cart():
     main_shop = MainShop(driver)
-    main_shop.get_authentication()
+    main_shop.complete_authentication(credentials)
 
-    goods = Goods(driver)
+    goods = Goods()
     goods.buy_goods()
     goods.go_to_cart()
 
-    cart = Cart(driver)
+    cart = Cart()
     cart.checkout()
 
-    personal_data = PersonalData(driver)
+    personal_data = PersonalData()
     personal_data.fill_personal_data()
 
-    check_total = CheckTotal(driver)
+    check_total = CheckTotal()
     check_total.check_total()
 
     assert check_total.check_total().text == "Total: $58.29"

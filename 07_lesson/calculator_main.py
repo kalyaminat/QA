@@ -19,7 +19,8 @@ class CalculatorMainPage:
 
     def get_result(self):
         WebDriverWait(self.driver, 50).until(
-            EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen")))
+            EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15")
+        )
         result = self.driver.find_element(By.CSS_SELECTOR, '.screen').text
         return result
 
