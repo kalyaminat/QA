@@ -6,10 +6,10 @@ from main_shop import MainShop
 products = []
 
 class Goods:
-    def __init__(self, driver):
+    def __init__(self):
         self.driver = driver
 
-    def buy_goods(self, driver):
+    def buy_goods(self):
         for product in products:
             self.driver.find_element(By.CSS_SELECTOR, product).click()
 
