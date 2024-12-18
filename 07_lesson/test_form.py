@@ -20,24 +20,23 @@ def driver():
     yield driver
     driver.quit()
 
-
 def TestForm(driver):
     main_page = FormMainPage(driver)
     main_page.fill_cell()
     main_page.click_submit()
 
     filled_form = FilledForm(driver)
-    filled_form.find_fields()
-    filled_form.get_class('first-name')
-    filled_form.get_class('last-name')
-    filled_form.get_class('address')
-    filled_form.get_class('zip-code')
-    filled_form.get_class('city')
-    filled_form.get_class('country')
-    filled_form.get_class('email')
-    filled_form.get_class('phone')
-    filled_form.get_class('job-position')
-    filled_form.get_class('company')
+    filled_form.find_fields(id_values)
+    # filled_form.get_class('first-name')
+    # filled_form.get_class('last-name')
+    # filled_form.get_class('address')
+    # filled_form.get_class('zip-code')
+    # filled_form.get_class('city')
+    # filled_form.get_class('country')
+    # filled_form.get_class('email')
+    # filled_form.get_class('phone')
+    # filled_form.get_class('job-position')
+    # filled_form.get_class('company')
 
     assert 'success' in filled_form.get_class('first-name')
     assert 'success' in filled_form.get_class('last-name')
@@ -50,8 +49,7 @@ def TestForm(driver):
     assert 'success' in filled_form.get_class('job-position')
     assert 'success' in filled_form.get_class('company')
 
-    #filled_form.get_class()
-    #assert 'success' in filled_form.get_class() if id_value != 'zip-code'
+
 
 
 

@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from main_shop import MainShop
 
-personal = dict()
+#personal = dict()
 
 class PersonalData:
     def __init__(self, driver):
