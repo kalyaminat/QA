@@ -6,20 +6,22 @@ from selenium.webdriver.support import expected_conditions as EC
 class FormMainPage:
     def __init__(self, driver):
         self.driver = driver
+        self.submit_button = (By.CSS_SELECTOR, 'button[type="submit"]')
         self.driver.get("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
 
     def fill_cell(self, v_dict: dict):
         for key, value in v_dict.items():
-            selector = f'[name = {key}]'
-            self.driver.find_element(By.CSS_SELECTOR, selector).send_key(value)
-            self.driver.clear()
+            selector = f'[name = "{key}"]'
+            element = self.driver.find_element(By.CSS_SELECTOR, selector)  # Найти веб-элемент
+            element.clear()  # Очистить поле
+            element.send_keys(value)  # Ввести значение
 
 
     def click_submit(self):
         WebDriverWait(self.driver, 10).until(
-            EC.presence_of_all_elements_located(self.values)
+            EC.element_to_be_clickable(self.submit_button)
         )
-        return self.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
+        self.driver.find_element(*self.submit_button).click()
 
 
 
