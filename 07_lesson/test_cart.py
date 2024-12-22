@@ -31,8 +31,9 @@ def driver():
     yield driver
     driver.quit()
 
-def test_cart():
+def test_cart(driver):
     main_shop = MainShop(driver)
+    main_shop.wait()
     main_shop.complete_authentication(credentials)
 
     goods = Goods()
