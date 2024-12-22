@@ -13,7 +13,7 @@ class MainShop:
         self.driver.get("https://www.saucedemo.com/")
 
     def wait(self):
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, "input#user-name")))
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "input#user-name")))
 
     def complete_authentication(self,credentials):
         for key, value in credentials.items():
