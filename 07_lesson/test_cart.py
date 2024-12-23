@@ -33,7 +33,6 @@ def driver():
 
 def test_cart(driver):
     main_shop = MainShop(driver)
-    main_shop.wait()
     main_shop.complete_authentication(credentials)
 
     goods = Goods()
