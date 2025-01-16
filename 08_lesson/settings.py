@@ -1,0 +1,6 @@
+LOGIN = "olegshvez35@gmail.com"
+PASSWORD = "Fidel9423979"
+COMPANY_ID = "fcff007b-c7e4-4de7-a7df-bef8685f06d4"
+KEY = "KBlpCNZhupS-eYwNh28csJ+v3RSaigLXiFPQjlGPfwaBq4bip-ti+ZqEbmG8saWB"
+BASIC_URL = "https://ru.yougile.com/api-v2/"
+USER_ID = "14e00562-2146-480e-a30d-04c7802f0990"
